@@ -4,15 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Pages Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>My Web Development Lab</h1>
-    <p>ชื่อ: Phutawan │ รหัสนิสิต: 67160362</p>
-    <p id="status">Ready to deploy</p>
-    <button id="helloBtn">Say Hello</button>
+  <header class="topbar">
+    <a class="brand" href="#top">webdev-actions-lab</a>
+    <nav class="nav">
+      <a href="#about">เกี่ยวกับฉัน</a>
+      <a href="#skills">ทำอะไรได้</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+    <button id="themeBtn" class="theme-btn" aria-label="สลับโหมดสว่าง/มืด">โหมดมืด</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hello">สวัสดีครับ ผมชื่อ</p>
+      <h1>Phutawan Somkun</h1>
+      <p class="meta">รหัสนิสิต 67160362 </p>
+      <p class="intro">เว็บนี้เขียนด้วย HTML, CSS และ JavaScript ล้วน ทุกครั้งที่ push ขึ้น branch main
+        GitHub Actions จะ deploy ให้อัตโนมัติ</p>
+
+      <ol class="pipeline" id="pipeline" aria-label="ขั้นตอนการ deploy">
+        <li>แก้ไขโค้ด</li>
+        <li>git push</li>
+        <li>GitHub Actions</li>
+        <li>GitHub Pages</li>
+      </ol>
+
+      <div class="hero-actions">
+        <button id="helloBtn" class="btn-primary">Say Hello</button>
+        <p id="status" class="status" aria-live="polite">Ready to deploy</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>เกี่ยวกับฉัน</h2>
+      <div class="about-body">
+        <p>ผมเป็นนิสิตที่กำลังเรียนการพัฒนาเว็บ สนใจการทำหน้าเว็บที่ใช้งานง่าย
+          และอยากเข้าใจว่าโค้ดเดินทางจากเครื่องของเราไปถึงผู้ใช้ได้อย่างไร</p>
+        <p>แลปนี้ทำให้ได้ลองใช้ Git, GitHub Actions และ GitHub Pages ร่วมกันเป็นครั้งแรก
+          (แก้ข้อความส่วนนี้เป็นเรื่องของตัวเองได้เลย)</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>ทำอะไรได้บ้าง</h2>
+      <div class="can-do">
+        <div class="can">
+          <h3>สร้างหน้าเว็บ</h3>
+          <p>ออกแบบและเขียนหน้าเว็บที่ใช้ได้ทั้งบนคอมและมือถือ</p>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+        </div>
+        <div class="can">
+          <h3>จัดการโค้ด</h3>
+          <p>เก็บเวอร์ชันของงาน และส่งโค้ดขึ้น GitHub</p>
+          <div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+        </div>
+        <div class="can">
+          <h3>Deploy อัตโนมัติ</h3>
+          <p>ตั้งค่าให้เว็บอัปเดตเองทุกครั้งที่ push โค้ด</p>
+          <div class="chips"><span>GitHub Actions</span><span>GitHub Pages</span><span>YAML</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>ติดต่อ</h2>
+      <ul class="contact">
+        <li><span>อีเมล</span><a href="mailto:your.email@example.com">67160362@go.buu.ac.th</a></li>
+        <li><span>GitHub</span><a href="https://github.com/67160362">github.com/67160362</a></li>
+      </ul>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>Deploy อัตโนมัติด้วย GitHub Actions · <span id="year"></span></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
